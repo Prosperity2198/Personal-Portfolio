@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Personal Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="contact">
+        <div class="contact-info">
+            <h1>Contact Me</h1>
+            <div class="animated-text">
+                <span>H</span><span>i</span><span>r</span><span>e_</span> <span>M</span><span>e!</span>
+            </div>
+            <p>You can Hire me and I'd love to hear from you! Whether you have a question, a project idea, or just want to connect, feel free to reach out.</p>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mgvkwlzj" target="_blank" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" >
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-links">
+            <h3>Connect with me:</h3>
+            <div class="sci">
+                <a href="https://github.com/Prosperity2198" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/prosperity-chinecherem-2a675b285/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://x.com/Necherem00" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.youtube.com/@prosperitychinecherem2262" target="_blank"><i class="bx bxl-youtube"></i></a>
+                <a href="https://wa.me/+2348151870991" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+                <a href="mailto:iprosperity2198@gmail.com" target="_blank"><i class="bx bx-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
