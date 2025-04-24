@@ -926,9 +926,10 @@ hr {
     }
 }
 
+/* Media Query for Mobile Phones (max-width: 480px) */
 @media (max-width: 480px) {
     body {
-        padding-top: 100px; /* Reduced padding to bring sections closer to the navbar */
+        padding-top: 100px; /* Adjusted padding for smaller screens */
         background: #1f242d;
     }
 
@@ -939,7 +940,7 @@ hr {
     }
 
     .navbar ul {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 5px;
     }
@@ -968,6 +969,16 @@ hr {
         font-size: 18px;
     }
 
+    .home-info h2 span {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        animation: display-text 16s linear infinite;
+    }
+
+    .home-info h2 span::before {
+        border-right: 1px solid #7cf03d; /* Adjusted border size for smaller screens */
+        animation: fill-text 4s linear infinite;
+    }
+
     .home-info p {
         font-size: 12px;
     }
@@ -975,6 +986,30 @@ hr {
     .home-img .img-box {
         width: 90vw;
         height: 100vw;
+    }
+
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+        width: 400px; /* Adjusted size for smaller screens */
+        height: 400px;
+        animation: rotate-border 10s linear infinite;
+    }
+
+    .home-img .img-box .img-item img {
+        object-fit: cover;
+        mix-blend-mode: lighten;
+    }
+
+    .animated-text {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .animated-text span {
+        animation: bounce 1.5s infinite;
+        animation-delay: calc(0.1s * var(--i));
     }
 
     .about {
@@ -1064,5 +1099,182 @@ hr {
 
     .animated-text {
         font-size: 18px;
+    }
+}
+
+
+/* Media Query for Small Mobile Phones (max-width: 360px) */
+@media (max-width: 360px) {
+    body {
+        padding-top: 80px; /* Reduced padding for smaller screens */
+        background: #1f242d;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 4%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding-top: 100px; /* Adjusted padding for better alignment */
+    }
+
+    .home-info h1 {
+        font-size: 24px;
+    }
+
+    .home-info h2 {
+        font-size: 16px;
+    }
+
+    .home-info h2 span {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        animation: display-text 16s linear infinite;
+    }
+
+    .home-info h2 span::before {
+        border-right: 1px solid #7cf03d; /* Adjusted border size for smaller screens */
+        animation: fill-text 4s linear infinite;
+    }
+
+    .home-info p {
+        font-size: 10px;
+    }
+
+    .home-img .img-box {
+        width: 95vw;
+        height: 100vw;
+    }
+
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+        width: 300px; /* Reduced size for smaller screens */
+        height: 300px;
+        animation: rotate-border 10s linear infinite;
+    }
+
+    .home-img .img-box .img-item img {
+        object-fit: cover;
+        mix-blend-mode: lighten;
+    }
+
+    .animated-text {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .animated-text span {
+        animation: bounce 1.5s infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    .about {
+        padding: 15px 4%;
+        padding-top: 250px; /* Adjusted padding to bring closer to navbar */
+    }
+
+    .about-info h1 {
+        font-size: 24px;
+    }
+
+    .about-info h2 {
+        font-size: 16px;
+    }
+
+    .about-info p {
+        font-size: 10px;
+    }
+
+    .portfolio {
+        padding: 15px 4%;
+        padding-top: 250px; /* Adjusted padding to bring closer to navbar */
+    }
+
+    .portfolio-info h1 {
+        font-size: 24px;
+    }
+
+    .portfolio-info p {
+        font-size: 10px;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .services {
+        padding: 15px 4%;
+        padding-top: 400px; /* Adjusted padding to bring closer to navbar */
+    }
+
+    .services-info h1 {
+        font-size: 24px;
+    }
+
+    .services-info p {
+        font-size: 10px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .contact {
+        padding: 15px 4%;
+        padding-top: 80px; /* Adjusted padding to bring closer to navbar */
+    }
+
+    .contact h1 {
+        font-size: 24px;
+    }
+
+    .contact p {
+        font-size: 10px;
+    }
+
+    .contact-form {
+        padding: 8px;
+    }
+
+    .social-links .sci {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .animated-text {
+        font-size: 14px;
     }
 }
