@@ -994,25 +994,26 @@ hr {
     }
 
     @keyframes display-text {
-        25%, 
-        100% {
-            display: none;
+        0%, 25% {
+            display: inline-block; /* Ensure text is visible */
+        }
+        26%, 100% {
+            display: inline-block; /* Keep it consistent with larger screens */
         }
     }
 
     @keyframes fill-text {
-        10%, 
-        100% {
+        0%, 10% {
             width: 0;
         }
-        70%, 
-        90% {
+        70%, 90% {
             width: 100%;
         }
         100% {
             width: 0;
         }
     }
+    
 
     .home-info p {
         font-size: 12px;
@@ -1046,10 +1047,13 @@ hr {
     }
 
     @keyframes rotate-border {
+        0% {
+            transform: rotate(0deg);
+        }
         100% {
             transform: rotate(360deg);
         }
-    }
+    } 
 
     .home-img .img-box .img-item {
         position: relative;
