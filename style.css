@@ -975,19 +975,19 @@ hr {
     .home-info h2 span {
         font-size: 14px; /* Adjusted font size for animation */
         animation: display-text 12s linear infinite; /* Reduced duration for better performance */
+        animation-delay: calc(-4s * var(--i));
     }
 
     .home-info h2 span::before {
         border-right: 1px solid #7cf03d; /* Adjusted border size */
         animation: fill-text 3s linear infinite; /* Reduced duration for smaller screens */
+        animation-delay: calc(-4s * var(--i));
+        content: attr(data-text);
     }
 
     @keyframes display-text {
-        0%, 25% {
+        25%, 100% {
             display: none;
-        }
-        26%, 100% {
-            display: inline-block;
         }
     }
 
@@ -1010,6 +1010,7 @@ hr {
     .home-img .img-box {
         width: 70vw;
         height: 80vw;
+        overflow: hidden;
     }
 
     .home-img .img-box::before,
@@ -1017,6 +1018,8 @@ hr {
         width: 300px; /* Reduced size for smaller screens */
         height: 300px;
         animation: rotate-border 8s linear infinite; /* Adjusted duration for smoother animation */
+        transform: rotate(0deg);
+        background: conic-gradient(transparent, transparent, transparent, #7cf03d);
     }
 
     .home-img .img-box::after {
@@ -1024,9 +1027,6 @@ hr {
     }
 
     @keyframes rotate-border {
-        0% {
-            transform: rotate(0deg);
-        }
         100% {
             transform: rotate(360deg);
         }
@@ -1034,7 +1034,7 @@ hr {
 
     .about {
         padding: 17px 4%;
-        padding-top: 350px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 400px; /* Adjusted padding to bring closer to navbar */
     }
 
     .about-info h1 {
@@ -1051,7 +1051,7 @@ hr {
 
     .portfolio {
         padding: 17px 4%;
-        padding-top: 300px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 260px; /* Adjusted padding to bring closer to navbar */
     }
 
     .portfolio-info h1 {
@@ -1074,7 +1074,7 @@ hr {
 
     .services {
         padding: 17px 4%;
-        padding-top: 600px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 620px; /* Adjusted padding to bring closer to navbar */
     }
 
     .services-info h1 {
@@ -1121,4 +1121,3 @@ hr {
         font-size: 17px;
     }
 }
-
