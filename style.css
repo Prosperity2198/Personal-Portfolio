@@ -9,6 +9,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 a {
@@ -784,128 +785,163 @@ hr {
 }
 
 
-
-
-
-
-
-
 /* Responsiveness */
 
-/* For large tablets and small desktops (1024px and below) */
-@media (max-width: 1024px) {
-    .navbar ul {
-        gap: 20px;
-    }
 
-    .home {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .home-info h1 {
-        font-size: 45px;
-    }
-
-    .home-info h2 {
-        font-size: 28px;
-    }
-
-    .home-img .img-box {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    .about, .portfolio, .services, .contact {
-        padding: 40px 5%;
-    }
-
-    .about-info h1, .portfolio-info h1, .services-info h1, .contact h1 {
-        font-size: 45px;
-    }
-
-    .about-info p, .portfolio-info p, .services-info p, .contact p {
-        font-size: 16px;
-    }
-
-    .projects, .services-container {
-        gap: 20px;
-    }
-
-    .project, .service-card {
-        width: 250px;
-    }
-}
-
-/* For tablets (768px and below) */
 @media (max-width: 768px) {
-    .navbar ul {
+    body {
+        background: #1f242d;
+    }
+
+    .navbar {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        padding: 15px 5%;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        padding: 10px 15px;
     }
 
     .home {
         flex-direction: column;
         text-align: center;
         gap: 20px;
+        padding-top: 150px;
     }
 
     .home-info h1 {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .home-info h2 {
-        font-size: 24px;
+        font-size: 22px;
+    }
+
+    .home-info p {
+        font-size: 14px;
     }
 
     .home-img .img-box {
-        width: 60vw;
-        height: 60vw;
+        width: 70vw;
+        height: 80vw;
     }
 
-    .btn {
-        padding: 8px 20px;
+    .about {
+        padding: 20px 5%;
+        padding-top: 450px;
+    }
+
+    .about-info h1 {
+        font-size: 36px;
+    }
+
+    .about-info h2 {
+        font-size: 22px;
+    }
+
+    .about-info p {
         font-size: 14px;
     }
 
-    .about-info h1, .portfolio-info h1, .services-info h1, .contact h1 {
-        font-size: 35px;
+    .portfolio {
+        padding: 20px 5%;
+        padding-top: 450px;
     }
 
-    .about-info p, .portfolio-info p, .services-info p, .contact p {
+    .portfolio-info h1 {
+        font-size: 36px;
+    }
+
+    .portfolio-info p {
         font-size: 14px;
     }
 
-    .projects, .services-container {
-        gap: 15px;
+    .projects {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .project, .service-card {
-        width: 200px;
+    .project {
+        width: 100%;
+    }
+
+    .services {
+        padding: 20px 5%;
+        padding-top: 700px;
+    }
+
+    .services-info h1 {
+        font-size: 36px;
+    }
+
+    .services-info p {
+        font-size: 14px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 20px 5%;
+        padding-top: 150px;
+    }
+
+    .contact h1 {
+        font-size: 36px;
+    }
+
+    .contact p {
+        font-size: 14px;
     }
 
     .contact-form {
         padding: 15px;
     }
 
-    .social-links .sci a {
-        font-size: 1.2rem;
-        padding: 8px;
-    }
-}
-
-/* For mobile devices (480px and below) */
-@media (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column;
+    .social-links .sci {
+        flex-wrap: wrap;
         gap: 10px;
     }
 
-    .home {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .animated-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .navbar {
+        padding: 10px 3%;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
     }
 
     .home-info h1 {
@@ -916,38 +952,42 @@ hr {
         font-size: 18px;
     }
 
-    .home-img .img-box {
-        width: 80vw;
-        height: 80vw;
-    }
-
-    .btn {
-        padding: 6px 15px;
+    .home-info p {
         font-size: 12px;
     }
 
-    .about-info h1, .portfolio-info h1, .services-info h1, .contact h1 {
+    .home-img .img-box {
+        width: 90vw;
+        height: 100vw;
+    }
+
+    .about-info h1,
+    .portfolio-info h1,
+    .services-info h1,
+    .contact h1 {
         font-size: 28px;
     }
 
-    .about-info p, .portfolio-info p, .services-info p, .contact p {
+    .about-info h2,
+    .portfolio-info p,
+    .services-info p,
+    .contact p {
         font-size: 12px;
     }
 
-    .projects, .services-container {
-        gap: 10px;
+    .project {
+        padding: 10px;
     }
 
-    .project, .service-card {
-        width: 150px;
+    .service-card {
+        padding: 10px;
     }
 
     .contact-form {
         padding: 10px;
     }
 
-    .social-links .sci a {
-        font-size: 1rem;
-        padding: 6px;
+    .animated-text {
+        font-size: 18px;
     }
 }
