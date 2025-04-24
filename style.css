@@ -973,29 +973,40 @@ hr {
     }
 
     .home-info h2 span {
-        font-size: 14px; /* Adjusted font size for animation */
-        animation: display-text 12s linear infinite; /* Reduced duration for better performance */
-        animation-delay: calc(-4s * var(--i));
+        position: relative;
+        font-size: 14px;
+        color: transparent;
+        -webkit-text-stroke: 0.5px #7cf03d;
+        animation: display-text 10s linear infinite; 
+        animation-delay: calc(-3s * var(--i));
     }
 
     .home-info h2 span::before {
-        border-right: 1px solid #7cf03d; /* Adjusted border size */
-        animation: fill-text 3s linear infinite; /* Reduced duration for smaller screens */
-        animation-delay: calc(-4s * var(--i));
         content: attr(data-text);
+        position: absolute;
+        width: 0;
+        color: #7cf03d;
+        border-right: 1px solid #7cf03d;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: fill-text 2.5s linear infinite;
+        animation-delay: calc(-3s * var(--i));
     }
 
     @keyframes display-text {
-        25%, 100% {
+        25%, 
+        100% {
             display: none;
         }
     }
 
     @keyframes fill-text {
-        0%, 10% {
+        10%, 
+        100% {
             width: 0;
         }
-        70%, 90% {
+        70%, 
+        90% {
             width: 100%;
         }
         100% {
@@ -1008,16 +1019,24 @@ hr {
     }
 
     .home-img .img-box {
+        position: relative;
         width: 70vw;
         height: 80vw;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
     }
 
     .home-img .img-box::before,
     .home-img .img-box::after {
-        width: 300px; /* Reduced size for smaller screens */
+        content: '';
+        position: absolute;
+        width: 300px;
         height: 300px;
-        animation: rotate-border 8s linear infinite; /* Adjusted duration for smoother animation */
+        animation: rotate-border 8s linear infinite; 
         transform: rotate(0deg);
         background: conic-gradient(transparent, transparent, transparent, #7cf03d);
     }
@@ -1030,6 +1049,28 @@ hr {
         100% {
             transform: rotate(360deg);
         }
+    }
+
+    .home-img .img-box .img-item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #1f242d;
+        border-radius: 50%;
+        border: .1px solid #1f242d;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    .home-img .img-box .img-item img {
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        mix-blend-mode: lighten;
     }
 
     .about {
