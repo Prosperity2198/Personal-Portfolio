@@ -977,8 +977,8 @@ hr {
         font-size: 14px;
         color: transparent;
         -webkit-text-stroke: 0.5px #7cf03d;
-        animation: display-text 10s linear infinite; 
-        animation-delay: calc(-3s * var(--i));
+        animation: display-text 16s linear infinite; 
+        animation-delay: calc(-4s * var(--i));
     }
 
     .home-info h2 span::before {
@@ -989,16 +989,16 @@ hr {
         border-right: 1px solid #7cf03d;
         white-space: nowrap;
         overflow: hidden;
-        animation: fill-text 2.5s linear infinite;
-        animation-delay: calc(-3s * var(--i));
+        animation: fill-text 4s linear infinite;
+        animation-delay: calc(-4s * var(--i));
     }
 
     @keyframes display-text {
-        0%, 25% {
-            display: inline-block; /* Ensure text is visible */
+        0%, 24% {
+            opacity: 0;
         }
-        26%, 100% {
-            display: inline-block; /* Keep it consistent with larger screens */
+        25%, 100% {
+            opacity: 1; 
         }
     }
 
