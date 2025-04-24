@@ -970,6 +970,10 @@ hr {
 
     .home-info h2 {
         font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .home-info h2 span {
@@ -989,7 +993,7 @@ hr {
         border-right: 1px solid #7cf03d;
         white-space: nowrap;
         overflow: hidden;
-        animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite;
+        animation: fill-text 4s linear infinite;
         animation-delay: calc(-4s * var(--i));
     }
 
@@ -1002,23 +1006,18 @@ hr {
         }
     }
 
-    @keyframes typing {
-        0% {
+    @keyframes fill-text {
+        0%, 10% {
             width: 0;
         }
-        50%, 100% {
+        70%, 90% {
             width: 100%;
         }
-    }
-
-    @keyframes blink {
-        0%, 50% {
-            border-color: transparent;
-        }
-        51%, 100% {
-            border-color: #7cf03d;
+        100% {
+            width: 0;
         }
     }
+    
 
     .home-info p {
         font-size: 12px;
