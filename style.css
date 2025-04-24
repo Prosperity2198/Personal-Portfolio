@@ -926,6 +926,11 @@ hr {
     }
 }
 
+
+
+
+
+
 @media (max-width: 480px) {
     body {
         background: #1f242d;
@@ -964,7 +969,38 @@ hr {
     }
 
     .home-info h2 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .home-info h2 span {
+        font-size: 14px; /* Adjusted font size for animation */
+        animation: display-text 12s linear infinite; /* Reduced duration for better performance */
+    }
+
+    .home-info h2 span::before {
+        border-right: 1px solid #7cf03d; /* Adjusted border size */
+        animation: fill-text 3s linear infinite; /* Reduced duration for smaller screens */
+    }
+
+    @keyframes display-text {
+        0%, 25% {
+            display: none;
+        }
+        26%, 100% {
+            display: inline-block;
+        }
+    }
+
+    @keyframes fill-text {
+        0%, 10% {
+            width: 0;
+        }
+        70%, 90% {
+            width: 100%;
+        }
+        100% {
+            width: 0;
+        }
     }
 
     .home-info p {
@@ -972,9 +1008,28 @@ hr {
     }
 
     .home-img .img-box {
-        width: 55vw;
-        height: 65vw;
-        overflow: hidden;
+        width: 70vw;
+        height: 80vw;
+    }
+
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+        width: 300px; /* Reduced size for smaller screens */
+        height: 300px;
+        animation: rotate-border 8s linear infinite; /* Adjusted duration for smoother animation */
+    }
+
+    .home-img .img-box::after {
+        animation-delay: -4s; /* Adjusted delay for smaller screens */
+    }
+
+    @keyframes rotate-border {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
     .about {
