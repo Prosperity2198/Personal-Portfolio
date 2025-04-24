@@ -974,11 +974,12 @@ hr {
     .home-img .img-box {
         width: 55vw;
         height: 65vw;
+        overflow: hidden;
     }
 
     .about {
         padding: 17px 4%;
-        padding-top: 300px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 350px; /* Adjusted padding to bring closer to navbar */
     }
 
     .about-info h1 {
@@ -1018,7 +1019,7 @@ hr {
 
     .services {
         padding: 17px 4%;
-        padding-top: 500px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 600px; /* Adjusted padding to bring closer to navbar */
     }
 
     .services-info h1 {
@@ -1041,7 +1042,7 @@ hr {
 
     .contact {
         padding: 17px 4%;
-        padding-top: 100px; /* Adjusted padding to bring closer to navbar */
+        padding-top: 120px; /* Adjusted padding to bring closer to navbar */
     }
 
     .contact h1 {
