@@ -989,7 +989,7 @@ hr {
         border-right: 1px solid #7cf03d;
         white-space: nowrap;
         overflow: hidden;
-        animation: fill-text 4s linear infinite;
+        animation: typing 4s steps(20, end) infinite, blink 0.5s step-end infinite;
         animation-delay: calc(-4s * var(--i));
     }
 
@@ -1002,18 +1002,23 @@ hr {
         }
     }
 
-    @keyframes fill-text {
-        0%, 10% {
+    @keyframes typing {
+        0% {
             width: 0;
         }
-        70%, 90% {
+        50%, 100% {
             width: 100%;
         }
-        100% {
-            width: 0;
+    }
+
+    @keyframes blink {
+        0%, 50% {
+            border-color: transparent;
+        }
+        51%, 100% {
+            border-color: #7cf03d;
         }
     }
-    
 
     .home-info p {
         font-size: 12px;
