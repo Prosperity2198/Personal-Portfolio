@@ -974,7 +974,7 @@ hr {
     }
 
     .home-info h2 span {
-        display: inline-block;
+        /* display: inline-block; */
         position: relative;
         font-size: 14px;
         color: transparent;
@@ -996,19 +996,20 @@ hr {
     }
 
     @keyframes display-text {
-        0%, 24% {
-            opacity: 0;
-        }
-        25%, 100% {
-            opacity: 1; 
+
+        25%,
+        100% {
+            display: none;
         }
     }
 
     @keyframes fill-text {
-        0%, 10% {
+        10%,
+        100% {
             width: 0;
         }
-        70%, 90% {
+        70%,
+        90% {
             width: 100%;
         }
         100% {
