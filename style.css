@@ -975,9 +975,6 @@ hr {
 
     .home-info h2 span {
         display: inline-block;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
         position: relative;
         font-size: 14px;
         color: transparent;
