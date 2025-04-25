@@ -979,8 +979,8 @@ hr {
         font-size: 14px;
         color: transparent;
         -webkit-text-stroke: 0.5px #7cf03d;
-        animation: display-text 16s linear infinite; 
-        animation-delay: calc(4s * var(--i));
+        animation: display-text 16s linear infinite !important; 
+        animation-delay: calc(4s * var(--i)) !important;
     }
 
     .home-info h2 span::before {
@@ -991,8 +991,8 @@ hr {
         border-right: 1px solid #7cf03d;
         white-space: nowrap;
         overflow: hidden;
-        animation: fill-text 4s linear infinite;
-        animation-delay: calc(4s * var(--i));
+        animation: fill-text 4s linear infinite !important;
+        animation-delay: calc(4s * var(--i)) !important;
     }
 
     @keyframes display-text {
