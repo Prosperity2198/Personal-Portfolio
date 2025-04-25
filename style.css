@@ -974,7 +974,7 @@ hr {
     }
 
     .home-info h2 span {
-        display: flex;
+        display: inline-block;
         flex-direction: column;
         align-items: center;
         gap: 10px;
@@ -983,7 +983,7 @@ hr {
         color: transparent;
         -webkit-text-stroke: 0.5px #7cf03d;
         animation: display-text 16s linear infinite; 
-        animation-delay: calc(-4s * var(--i));
+        animation-delay: calc(4s * var(--i));
     }
 
     .home-info h2 span::before {
@@ -995,7 +995,7 @@ hr {
         white-space: nowrap;
         overflow: hidden;
         animation: fill-text 4s linear infinite;
-        animation-delay: calc(-4s * var(--i));
+        animation-delay: calc(4s * var(--i));
     }
 
     @keyframes display-text {
